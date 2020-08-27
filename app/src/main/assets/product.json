@@ -1,0 +1,112 @@
+{
+  "error": false,
+  "message": "Success",
+  "results": [
+    {
+      "category_name": "Indian Non Veg Main Course",
+      "category_id": "34",
+      "all_dishes": [
+        {
+          "dish_ID": "927",
+          "dish_name": "Butter Chicken (full)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/butter-chicken.jpg",
+          "dish_price": "410",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "931",
+          "dish_name": "Kabab Curry",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/malaikebabcurry.jpg",
+          "dish_price": "190",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "932",
+          "dish_name": "Kadhai Chicken (full)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/Kadhai-Chicken.jpg",
+          "dish_price": "410",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "938",
+          "dish_name": "Tawa Chicken (full)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/DSC_1075.jpg",
+          "dish_price": "410",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "940",
+          "dish_name": "Chicken Curry (full)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/Spicy-Malvani-Chicken-Curry.jpg",
+          "dish_price": "410",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "942",
+          "dish_name": "Creamy Chicken (full)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/555686_2_1_retail-5305a4389dd54fe41516979c93d769b419c74191_642x428.jpg",
+          "dish_price": "450",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "951",
+          "dish_name": "Mutton Curry (half)",
+          "dish_description": "3 pcs(h), 6 pcs(f)",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/Punjabi-Mutton-Curry-5-500x375.jpg",
+          "dish_price": "250",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "954",
+          "dish_name": "Mutton Payal Food (4pcs)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/C6-K1VPWkAAQ8k5.jpg",
+          "dish_price": "350",
+          "dish_type": "Non-veg"
+        },
+        {
+          "dish_ID": "955",
+          "dish_name": "Non Veg Thali",
+          "dish_description": "butter chicken, dal makhani, mix veg, rice, raita, papad, salad, 1 naan , 1 roti",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/non-veg-special-thali-250x250.png",
+          "dish_price": "300",
+          "dish_type": "Non-veg"
+        }
+      ]
+    },
+    {
+      "category_name": "Veg Tandoori Snacks",
+      "category_id": "29",
+      "all_dishes": [
+        {
+          "dish_ID": "926",
+          "dish_name": "Veg Spl Payal Food Thali",
+          "dish_description": "shahi paneer + dal makhani+mix veg + jeera rice+ 1 butter naan/ butter roti/ lanchha paratha+salad+raita +papad",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/hqdefault.jpg",
+          "dish_price": "190",
+          "dish_type": "Veg"
+        }
+      ]
+    },
+    {
+      "category_name": "Noodles Veg",
+      "category_id": "39",
+      "all_dishes": [
+        {
+          "dish_ID": "918",
+          "dish_name": "Channa Masala (full)",
+          "dish_description": "",
+          "dish_image": "https://www.digitalfoodyz.com/accounts/official-demo/public/uploaded-images/dish-images/20160328-channa-masala-recipe-6-1500x1125.jpg",
+          "dish_price": "160",
+          "dish_type": "Veg"
+        }
+      ]
+    }
+  ]
+}

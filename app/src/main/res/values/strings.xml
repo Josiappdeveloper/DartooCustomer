@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Dratoo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="email">Email Id</string>
+    <string name="passowrd">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+    <string name="action_Cart">Cart</string>
+    <string name="title_home">Home</string>
+    <string name="title_records">My Order</string>
+    <string name="title_more">More</string>
+    <string name="title_my_news">Category</string>
+    <string name="title_find_events">My Account</string>
+    <string name="logout">Logout</string>
+    <string name="privacy_policy"><![CDATA[Privacy & Policy]]></string>
+    <string name="terms_condition"><![CDATA[Terms & Conditions]]></string>
+    <string name="rate_us">Rate Us</string>
+    <string name="share">Share App</string>
+    <string name="pay_history">Payment History</string>
+    <string name="testimonial">Testimonial</string>
+    <string name="videos">Video</string>
+    <string name="gallery">Gallery</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="no_internet">No Internet Available</string>
+    <string name="try_again">Try Again</string>
+    <string name="forgot_pass">Forgot Password</string>
+    <string name="home_about">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</string>
+    <string name="txt_follow_up">Follow Up</string>
+    <string name="order_id">Order Id:</string>
+    <string name="place_on">Placed On:</string>
+    <string name="time_t">Time:</string>
+    <string name="tt_t">Total Items:</string>
+    <string name="tv_toolbar_price">Price :</string>
+    <string name="tracking_st">Tracking Status On:</string>
+    <string name="order_mode">Order Mode</string>
+    <string name="cash">Cash On Delivery</string>
+    <string name="pending">Pending</string>
+    <string name="date_d">Date:</string>
+    <string name="confirm">Confirm</string>
+    <string name="delivered">Delivered</string>
+</resources>
