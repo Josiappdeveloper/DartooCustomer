@@ -14,12 +14,15 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_3sdp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/searchBar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_42sdp"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="4dp"
                 app:cardUseCompatPadding="true">
@@ -52,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/searchBar"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -82,6 +86,7 @@
                     android:text="Instant delivery to your doorstep"
                     android:textColor="@color/primary_text"
                     android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -91,6 +96,7 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:weightSum="2">
 
                     <LinearLayout
@@ -151,6 +157,7 @@
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:weightSum="2">
 
                     <LinearLayout
@@ -204,15 +211,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:weightSum="3">
 
                     <LinearLayout
                         android:id="@+id/ll_any_store"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -230,8 +237,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_any_store"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_any_store_in_city" />
@@ -246,8 +253,8 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Any store in the City"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -255,7 +262,7 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -273,8 +280,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_flowers"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_flowers_and_gift" />
@@ -289,8 +296,8 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Flowers &amp; Gift"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -299,7 +306,7 @@
                     <LinearLayout
                         android:id="@+id/ll_food"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -317,8 +324,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_food_new"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_food_new" />
@@ -333,51 +340,8 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Food"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
-
-                            </RelativeLayout>
-                        </androidx.cardview.widget.CardView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
-                        android:layout_marginEnd="@dimen/_3sdp"
-                        android:layout_weight="1">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:cardCornerRadius="@dimen/_3sdp"
-                            app:cardElevation="2dp"
-                            app:cardUseCompatPadding="true">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_margin="@dimen/_4sdp">
-
-                                <ImageView
-                                    android:id="@+id/img_milk"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="@dimen/_5sdp"
-                                    android:background="@drawable/ic_milk_and_diary" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/img_milk"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginStart="@dimen/_3sdp"
-                                    android:layout_marginTop="@dimen/_1sdp"
-                                    android:layout_marginEnd="@dimen/_3sdp"
-                                    android:gravity="center"
-                                    android:text="Milk &amp; diary"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -390,11 +354,11 @@
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:weightSum="3">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -412,8 +376,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_paan_shop"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_paan_shop" />
@@ -428,8 +392,8 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Paan shop"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -437,7 +401,7 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -455,8 +419,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_send_pack"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_send_packages" />
@@ -471,8 +435,8 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Send packages"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -480,7 +444,7 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -498,8 +462,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_service"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_food_new" />
@@ -514,8 +478,60 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Services"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="@dimen/_3sdp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_4sdp">
+
+                                <ImageView
+                                    android:id="@+id/img_milk"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:background="@drawable/ic_milk_and_diary" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_milk"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="@dimen/_3sdp"
+                                    android:layout_marginTop="@dimen/_1sdp"
+                                    android:layout_marginEnd="@dimen/_3sdp"
+                                    android:gravity="center"
+                                    android:text="Milk &amp; diary"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -523,7 +539,7 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
                         android:layout_weight="1">
 
@@ -541,8 +557,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_meat"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_35sdp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:background="@drawable/ic_meat_and_fish" />
@@ -557,8 +573,8 @@
                                     android:layout_marginEnd="@dimen/_3sdp"
                                     android:gravity="center"
                                     android:text="Meat &amp; fish"
-                                    android:textColor="@color/primary_text"
-                                    android:textSize="@dimen/_8sdp" />
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
 
                             </RelativeLayout>
 

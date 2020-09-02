@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +27,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.birhman.grocery.fragment.MoreFragment;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -103,7 +106,9 @@ public class MainActivity extends BaseActivity
         }
 
         init();
-        toolbar.setTitle("Home");
+        toolbar.setTitle("DLF Colony, Sector 14, Gurugram, Haryana");
+        toolbar.setTitleTextColor(Color.BLACK);
+
         viewFragment(new HomeFragment(), FRAGMENT_HOME);
 
         cart_count = cartCount();

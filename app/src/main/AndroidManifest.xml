@@ -31,20 +31,26 @@
             android:name=".activity.MainActivity"
             android:theme="@style/AppThemes"/>
         <activity android:name=".activity.BaseActivity" />
+
         <activity
             android:name=".activity.ProductActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppThemes"/>
+
         <activity
             android:name=".activity.WebViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
 
         <activity
             android:name=".activity.StoreListActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppThemes"/>
 
         <activity
             android:name=".activity.StoreViewActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppThemes"/>
+
         <activity
             android:name=".activity.LoginRegisterActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
@@ -57,7 +63,12 @@
             android:name=".activity.ContactUsActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@style/AppThemes"/>
-        <activity android:name=".activity.CartActivity" />
+
+        <activity
+            android:name=".activity.CartActivity"
+            android:theme="@style/AppThemes"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
         <activity android:name=".activity.CheckoutActivity" />
         <activity android:name=".activity.ProductViewActivity"/>
     </application>

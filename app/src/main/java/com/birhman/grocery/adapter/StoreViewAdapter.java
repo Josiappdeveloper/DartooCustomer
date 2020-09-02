@@ -30,12 +30,16 @@ public class StoreViewAdapter extends RecyclerView.Adapter<StoreViewAdapter.MyVi
     Context context;
     LocalStorage localStorage;
     Gson gson;
-    String id;
+    String id, storeName, storeDistance, storeTime;
 
-    public StoreViewAdapter(List<ProductCategoryModel> productList, Context context, String id) {
+    public StoreViewAdapter(List<ProductCategoryModel> productList, Context context,
+                            String id, String storeName, String storeDistance, String storeTime) {
         this.productList = productList;
         this.context = context;
         this.id = id;
+        this.storeName = storeName;
+        this.storeDistance = storeDistance;
+        this.storeTime = storeTime;
     }
 
     @NonNull
@@ -68,17 +72,17 @@ public class StoreViewAdapter extends RecyclerView.Adapter<StoreViewAdapter.MyVi
                     }
                 });
 
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, ProductActivity.class);
-                intent.putExtra("id", product.getId());
-                intent.putExtra("title", product.getTitle());
-                intent.putExtra("image", product.getImage());
-                intent.putExtra("storeType", id);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                context.startActivity(intent);
-            }
+        holder.imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, ProductActivity.class);
+            intent.putExtra("id", product.getId());
+            intent.putExtra("title", product.getTitle());
+            intent.putExtra("image", product.getImage());
+            intent.putExtra("storeType", id);
+            intent.putExtra("storeDistance", storeDistance);
+            intent.putExtra("storeName", storeName);
+            intent.putExtra("storeTime", storeTime);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            context.startActivity(intent);
         });
     }
 

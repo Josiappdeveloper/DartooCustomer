@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,39 +43,14 @@ public class StoreListActivity extends AppCompatActivity {
         strTitle = getIntent().getStringExtra("title");
         id = getIntent().getStringExtra("id");
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495E")));
-        changeActionBarTitle(getSupportActionBar());
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
-
         recyclerView = findViewById(R.id.product_rv);
+        ImageView imgBackArrow = findViewById(R.id.img_back_arrow);
+        TextView txtTitle = findViewById(R.id.title);
+        txtTitle.setText(strTitle);
         data = new Data();
         setUpRecyclerView();
-    }
 
-    private void changeActionBarTitle(ActionBar actionBar) {
-        // Create a LayoutParams for TextView
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.MATCH_PARENT, // Width of TextView
-                RelativeLayout.LayoutParams.WRAP_CONTENT); // Height of TextView
-        TextView tv = new TextView(getApplicationContext());
-        // Apply the layout parameters to TextView widget
-        tv.setLayoutParams(lp);
-        tv.setTypeface(null, Typeface.BOLD);
-        // Set text to display in TextView
-        tv.setText(strTitle); // ActionBar title text
-        tv.setTextSize(20);
-
-        // Set the text color of TextView to red
-        // This line change the ActionBar title text color
-        tv.setTextColor(getResources().getColor(R.color.white));
-
-        // Set the ActionBar display option
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        // Finally, set the newly created TextView as ActionBar custom view
-        actionBar.setCustomView(tv);
+        imgBackArrow.setOnClickListener(view -> onBackPressed());
     }
 
     private void setUpRecyclerView() {
@@ -91,21 +67,6 @@ public class StoreListActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(mLayoutManager);
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             recyclerView.setAdapter(mAdapter);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // todo: goto back activity from here
-                Intent intent = new Intent(StoreListActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
     }
 }

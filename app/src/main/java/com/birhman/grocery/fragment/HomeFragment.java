@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -127,9 +128,9 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
-                for (int i = 0; i < dotscount; i++) {
-                    dots[i].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.non_active_dot));
-                }
+        //        for (int i = 0; i < dotscount; i++) {
+        //            dots[i].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.non_active_dot));
+        //        }
 
                 dots[position].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.active_dot));
             }
@@ -139,7 +140,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        scheduleSlider();
+    //    scheduleSlider();
 
         return view;
     }
@@ -168,13 +169,13 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onStop() {
-        timer.cancel();
+    //    timer.cancel();
         super.onStop();
     }
 
     @Override
     public void onPause() {
-        timer.cancel();
+    //    timer.cancel();
         super.onPause();
     }
 
@@ -186,6 +187,6 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Home");
+        getActivity().setTitle("DLF Colony, Sector 14, Gurugram, Haryana");
     }
 }

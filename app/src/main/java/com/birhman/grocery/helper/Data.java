@@ -77,44 +77,44 @@ public class Data {
     public List<StoreModel> getStoreList() {
         StoreModel storeModel = new StoreModel("1", "JK Store",
                 "https://beaforceofgood.files.wordpress.com/2015/08/indian-grocery.jpg",
-                "4.2 km Moti Nagar", "15 mins");
+                "4.2 km Moti Nagar", "15 mins", "3.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("2", "Grocers Store",
                 "https://lh3.googleusercontent.com/proxy/K6ix_64VtzRdw3JSQNrUt9tilonzGM5MWDHxjIS2POfv_smkSi6ZVlHtSl025rLPLaMKvSmp-rbvWuo6oL1mbwYYePVcBQ-3mQhlNSBLwZmvItuBWCUWJD3hc_5U-EMC",
-                "5 km Dwarka", "25 mins");
+                "5 km Dwarka", "25 mins", "4.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("3", "Food Max Store",
                 "https://www.pngkey.com/png/detail/84-847965_any-grocery-stores-7-day-advertised-price-supermarket.png",
                 "5.6 km Rohini",
-                "27 mins");
+                "27 mins", "3.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("4", "Fresh Products Shopee",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhCYJVqpkItVOKViF08NshGoEkfB6lI0X_2g&usqp=CAU",
-                "4.2 km Kamla Nagar", " 15 mins");
+                "4.2 km Kamla Nagar", " 15 mins", "5.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("5", "Modern Market",
                 "https://3.imimg.com/data3/EU/IL/MY-14547142/pulses-250x250.png",
-                "3.1 km Gurgaon", "20 mins");
+                "3.1 km Gurgaon", "20 mins", "1.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("6", "Geeta Store",
                 "https://3.imimg.com/data3/IG/YM/MY-20509649/store-pulses-and-food-grains-250x250.jpg",
-                "2.6 km Malviya Nagar", "10 mins");
+                "2.6 km Malviya Nagar", "10 mins", "2.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("7", "Mannu Store",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYynD3PHXxovHfVe1xT64YQp-RnbrA0t-GZA&usqp=CAU",
-                "3.5 Rajouri Garden", "20 mins");
+                "3.5 Rajouri Garden", "20 mins", "3.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("8", "Santosh Dairy",
                 "https://www.kindpng.com/picc/m/298-2983882_food-processing-industry-different-types-of-dairy-products.png",
-                "4 km Vikaspuri", "20 mins");
+                "4 km Vikaspuri", "20 mins", "0.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("9", "Ace Store",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR3xR1JsW9wkPibj5QHy9r5NBN4f_t4dOa6aA&usqp=CAU",
-                "2 km RK Puram", "33 mins");
+                "2 km RK Puram", "33 mins", "4.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("10", "Amit Super Market",
                 "https://www.kindpng.com/picc/m/239-2399368_garam-masala-powder-png-transparent-png.png",
-                "5.5 km Janakpuri", "30 mins");
+                "5.5 km Janakpuri", "30 mins", "3.5");
         storeList.add(storeModel);
         return storeList;
     }
@@ -122,44 +122,44 @@ public class Data {
     public List<StoreModel> getFoodStoreList() {
         StoreModel storeModel = new StoreModel("1", "Fruits Store",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWOxpvCIHueBRf38fnGQUQzJAF5St9evfHvQ&usqp=CAU",
-                "3 km Dinpur", "25 mins");
+                "3 km Dinpur", "25 mins", "4.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("2", "Modern Bazar",
                 " https://i.dlpng.com/static/png/7079524_preview.png",
-                "3.6 km Sarojini", "33 mins");
+                "3.6 km Sarojini", "33 mins", "3.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("3", "Amit Store",
                 "https://i7.pngguru.com/preview/205/18/532/basket-food-vegetable-grocery-store-desktop-wallpaper-fruit-and-vegetable.jpg",
                 "4 km IIT",
-                "30 mins");
+                "30 mins", "2.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("4", "Kajal Store",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqbZR4nwyP6MKTkOcG5ZbhU180hevUSXiBtQ&usqp=CAU",
-                "3.6 km Delhi", " 29 mins");
+                "3.6 km Delhi", " 29 mins", "2.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("5", "Fresh Products",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxNi3Kw3sVKWktpgIEVUQdHXyBCdpRTTRvAA&usqp=CAU",
-                "4 km Uttam Nagar", "26 mins");
+                "4 km Uttam Nagar", "26 mins", "1.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("6", "Arjun Fruits and Vegetables",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAXQWWkHo4pQMEuKUijfyTHxmporuCg_8puw&usqp=CAU",
-                "2.8 km Shadipur", "20 mins");
+                "2.8 km Shadipur", "20 mins", "2.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("7", "Fresh Vegetables Store",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmcufW617q4RQbHqwh64HkvL8sbMKRaiLPxQ&usqp=CAU",
-        "5.7 km", "47 mins");
+        "5.7 km", "47 mins", "4.5");
         storeList.add(storeModel);
         storeModel = new StoreModel("8", "Modern Market",
                 "https://pic.pikbest.com/pikbest/pic/00/23/65/46i888piCBQh.jpg-0.jpg!bw340",
-                "6 km Ashok Vihar", "44 mins");
+                "6 km Ashok Vihar", "44 mins", "4.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("9", "Fresh Fruits and Veggies",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHV3K3qKyAVo8eMf1VLyMfefX7Ot1XEURe3A&usqp=CAU",
-                "5.8 km Palam", "38 mins");
+                "5.8 km Palam", "38 mins", "5.0");
         storeList.add(storeModel);
         storeModel = new StoreModel("10", "Samar Fruits and Veggies",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7opcG9LXdq2-ai3Ajo1h9Z_pFBxhVYxLD8Q&usqp=CAU",
-                "4.8 km Palam", "28 mins");
+                "4.8 km Palam", "28 mins", "4.5");
         storeList.add(storeModel);
         return storeList;
     }
@@ -197,67 +197,49 @@ public class Data {
         productList.add(product);
         product = new Product("8", "4", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         productList.add(product);
-        product = new Product("9", "5", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("9", "5", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         productList.add(product);
-        product = new Product("10", "5", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("10", "5", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         productList.add(product);
-        product = new Product("11", "6", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("11", "6", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         productList.add(product);
-        product = new Product("12", "6", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("12", "6", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         productList.add(product);
-        product = new Product("13", "1", "Litche", "", "1 Kg",
-                "Rs.", "20", "30%OFF", "https://cdn.shopify.com/s/files/1/0665/4989/products/lichee-485x400_grande.jpg");
+        product = new Product("13", "1", "Litche", "", "1 Kg", "Rs.", "20", "30%OFF", "https://cdn.shopify.com/s/files/1/0665/4989/products/lichee-485x400_grande.jpg");
         productList.add(product);
         return productList;
     }
 
     public List<Product> getNewList() {
-        Product product = new Product("1", "1", "Apple", "",
-                "1 Kg", "Rs.", "20", "10% OFF", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        Product product = new Product("1", "1", "Apple", "", "1 Kg", "Rs.", "20", "10% OFF", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         newList.add(product);
-        product = new Product("2", "1", "Banana", "",
-                "1 Bounch", "Rs.", "10", "20% OFF", "https://images-na.ssl-images-amazon.com/images/I/21DejQuoT2L.jpg");
+        product = new Product("2", "1", "Banana", "", "1 Bounch", "Rs.", "10", "20% OFF", "https://images-na.ssl-images-amazon.com/images/I/21DejQuoT2L.jpg");
         newList.add(product);
-        product = new Product("3", "2", "House Clean Liquid", "",
-                "1 Lit.", "Rs.", "25", "", "http://sunsetcleaningcia.com/wp-content/uploads/2016/05/houseclean.png");
+        product = new Product("3", "2", "House Clean Liquid", "", "1 Lit.", "Rs.", "25", "", "http://sunsetcleaningcia.com/wp-content/uploads/2016/05/houseclean.png");
         newList.add(product);
-        product = new Product("4", "2", "House Clean Brush", "",
-                "1 Piece", "Rs.", "10", "", "https://www.clean-hoouse.com/wp-content/uploads/2017/09/13.png");
+        product = new Product("4", "2", "House Clean Brush", "", "1 Piece", "Rs.", "10", "", "https://www.clean-hoouse.com/wp-content/uploads/2017/09/13.png");
         newList.add(product);
-        product = new Product("5", "3", "Pampers", "",
-                "1 Piece", "20", "Rs.", "10% OFF", "https://cdn.bmstores.co.uk/images/hpcProductImage/imgFull/311448-Pampers-Baby-Dry-Size-4-Maxi-251.jpg");
+        product = new Product("5", "3", "Pampers", "", "1 Piece", "20", "Rs.", "10% OFF", "https://cdn.bmstores.co.uk/images/hpcProductImage/imgFull/311448-Pampers-Baby-Dry-Size-4-Maxi-251.jpg");
         newList.add(product);
         return newList;
     }
 
     public List<Product> getPopularList() {
-        Product product = new Product("6", "3", "Baby Oil", "",
-                "500 Ml", "Rs.", "31", "", "https://www.fortunaonline.net/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/n/k/nkbcp12_-_xia-shib-ao-baby-oil-200ml.png");
+        Product product = new Product("6", "3", "Baby Oil", "", "500 Ml", "Rs.", "31", "", "https://www.fortunaonline.net/media/catalog/product/cache/1/small_image/295x/040ec09b1e35df139433887a97daa66f/n/k/nkbcp12_-_xia-shib-ao-baby-oil-200ml.png");
         popularList.add(product);
-        product = new Product("7", "4", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("7", "4", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         popularList.add(product);
-        product = new Product("8", "4", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("8", "4", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         popularList.add(product);
-        product = new Product("9", "5", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("9", "5", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         popularList.add(product);
-        product = new Product("10", "5", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("10", "5", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         popularList.add(product);
-        product = new Product("11", "6", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("11", "6", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         popularList.add(product);
-        product = new Product("12", "6", "Apple", "", "1 Kg",
-                "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
+        product = new Product("12", "6", "Apple", "", "1 Kg", "Rs.", "20", "", "https://storage.googleapis.com/zopnow-static/images/products/320/fresh-apple-red-delicious-v-500-g.png");
         popularList.add(product);
-        product = new Product("13", "1", "Litche", "", "1 Kg",
-                "Rs.", "20", "30%OFF", "https://cdn.shopify.com/s/files/1/0665/4989/products/lichee-485x400_grande.jpg");
+        product = new Product("13", "1", "Litche", "", "1 Kg", "Rs.", "20", "30%OFF", "https://cdn.shopify.com/s/files/1/0665/4989/products/lichee-485x400_grande.jpg");
         popularList.add(product);
         return popularList;
     }

@@ -5,13 +5,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ProductActivity"
-    android:background="#99FFFFFF">
+    android:background="#FFFFFF">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/custom_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/product_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Bunch"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sector 45"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/primary_text"
+            android:layout_below="@+id/product_distance"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_below="@+id/product_area">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:src="@drawable/ic_time"/>
+
+            <TextView
+                android:id="@+id/product_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Bunch"
+                android:textColor="@color/primary_text"
+                android:layout_toEndOf="@+id/img"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textStyle="normal" />
+
+            <Switch
+                android:id="@+id/on_off_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:checked="true"
+                android:text="Veg"
+                android:layout_marginEnd="@dimen/_16sdp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_45sdp"
         app:cardCornerRadius="2dp"
+        android:layout_below="@+id/custom_tool"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true">
 
@@ -50,44 +137,30 @@
         android:orientation="vertical"
         android:visibility="visible">
 
-        <TextView
-            android:id="@+id/product_distance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 Bunch"
-            android:textSize="@dimen/_12sdp"
-            android:textColor="@color/primary_text"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/_4sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_16sdp"
-                android:layout_height="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_1sdp"
-                android:src="@drawable/ic_time"/>
-
-            <TextView
-                android:id="@+id/product_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1 Bunch"
-                android:textColor="@color/primary_text"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginStart="@dimen/_4sdp"
-                android:textStyle="normal" />
-        </LinearLayout>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/product_rv"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_below="@+id/txt_title"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"/>
+        android:layout_below="@+id/txt_title"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_rv"
+                android:layout_marginTop="@dimen/_8sdp"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

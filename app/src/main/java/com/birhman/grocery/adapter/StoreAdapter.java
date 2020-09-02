@@ -64,23 +64,20 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
         holder.title.setText(product.getTitle());
         holder.distance.setText(product.getDistance());
         holder.txtTime.setText(product.getTimes());
-        try {
-            Picasso.get()
-                    .load(product.getImage())
-                    .into(holder.imageView, new Callback() {
-                        @Override
-                        public void onSuccess() {
-                            holder.progressBar.setVisibility(View.GONE);
-                        }
+        holder.txtRating.setText(product.getRating());
+        Picasso.get()
+                .load(product.getImage())
+                .into(holder.imageView, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        holder.progressBar.setVisibility(View.GONE);
+                    }
 
-                        @Override
-                        public void onError(Exception e) {
-                            Log.d("Error : ", e.getMessage());
-                        }
-                    });
-        }catch (ExceptionInInitializerError e){
-            e.printStackTrace();
-        }
+                    @Override
+                    public void onError(Exception e) {
+                        Log.d("Error : ", e.getMessage());
+                    }
+                });
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,7 +107,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView title, distance, txtTime;
+        TextView title, distance, txtTime, txtRating;
         ProgressBar progressBar;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -121,6 +118,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
             progressBar = itemView.findViewById(R.id.progressbar);
             distance = itemView.findViewById(R.id.product_distance);
             txtTime = itemView.findViewById(R.id.product_time);
+            txtRating = itemView.findViewById(R.id.product_rating);
         }
     }
 }

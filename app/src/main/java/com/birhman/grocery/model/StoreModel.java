@@ -6,13 +6,15 @@ public class StoreModel {
     String distance;
     String times;
     String image;
+    String rating;
 
-    public StoreModel(String id, String title, String image, String distance, String times) {
+    public StoreModel(String id, String title, String image, String distance, String times, String rating) {
         this.id = id;
         this.title = title;
         this.image = image;
         this.distance = distance;
         this.times = times;
+        this.rating = rating;
     }
 
     public String getId() {
@@ -53,5 +55,13 @@ public class StoreModel {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 }

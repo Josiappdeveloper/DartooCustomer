@@ -43,4 +43,8 @@
     <style name="FormButton" parent="Theme.MaterialComponents">
         <item name="colorAccent">@color/colorPrimary</item>
     </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>

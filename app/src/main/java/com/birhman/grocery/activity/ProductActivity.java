@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -35,14 +36,9 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.List;
 
 public class ProductActivity extends BaseActivity {
-    /*
-
-    ProductAdapter mAdapter;
-    String Tag = "List";*/
-
     TabLayout tabLayout;
     ViewPager viewPager;
-    String strTitle, strStoreType;
+    String strTitle, strStoreType, storeName, storeTime, storeDistance;
     int no_of_categories = -1;
     Data data;
     List<Category> categoryList;
@@ -56,12 +52,33 @@ public class ProductActivity extends BaseActivity {
 
         strTitle = getIntent().getStringExtra("title");
         strStoreType = getIntent().getStringExtra("storeType");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495E")));
-        changeActionBarTitle(getSupportActionBar());
+        storeName = getIntent().getStringExtra("storeName");
+        storeTime = getIntent().getStringExtra("storeTime");
+        storeDistance = getIntent().getStringExtra("storeDistance");
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            toolbar.setTitleMarginStart((int) getResources().getDimension(R.dimen._15sdp));
+        }
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
+        TextView txtTitle = findViewById(R.id.product_distance);
+        TextView txtDistance = findViewById(R.id.product_area);
+        TextView txtTime = findViewById(R.id.product_time);
+        txtTitle.setText(storeName);
+        txtDistance.setText(storeDistance);
+        txtTime.setText(storeTime);
+
+        /*getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495E")));
+        changeActionBarTitle(getSupportActionBar());
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);*/
 
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpager);
@@ -123,11 +140,7 @@ public class ProductActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // todo: goto back activity from here
-                Intent intent = new Intent(ProductActivity.this, StoreViewActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
+                onBackPressed();
                 return true;
 
             case R.id.cart_action:
