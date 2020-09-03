@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -47,12 +48,25 @@ public class WebViewActivity extends AppCompatActivity implements View.OnClickLi
         init();
         getData();
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495E")));
-        changeActionBarTitle(getSupportActionBar());
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            toolbar.setTitleMarginStart((int) getResources().getDimension(R.dimen._15sdp));
+        }
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        //   toolbar.setTitle("Confirm Order");
+        getSupportActionBar().setTitle(heading);
+        toolbar.setTitleTextColor(Color.BLACK);
+
+        /*getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495E")));
+        changeActionBarTitle(getSupportActionBar());
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);*/
 
         web.setWebViewClient (new MyWebClient ());
         web.getSettings ().setJavaScriptEnabled (true);
@@ -113,11 +127,7 @@ public class WebViewActivity extends AppCompatActivity implements View.OnClickLi
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // todo: goto back activity from here
-                Intent intent = new Intent(WebViewActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
+                onBackPressed();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

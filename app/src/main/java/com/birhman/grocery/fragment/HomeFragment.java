@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.birhman.grocery.R;
+import com.birhman.grocery.activity.AnyStoreActivity;
 import com.birhman.grocery.activity.MainActivity;
 import com.birhman.grocery.activity.StoreListActivity;
 import com.birhman.grocery.adapter.CategoryAdapter;
@@ -65,11 +66,12 @@ public class HomeFragment extends Fragment {
 
         LinearLayout linearLayoutAnyStore = view.findViewById(R.id.ll_any_store);
         LinearLayout linearLayoutFood = view.findViewById(R.id.ll_food);
-        linearLayoutAnyStore.setOnClickListener(new View.OnClickListener() {
+        LinearLayout linearLayoutPaan = view.findViewById(R.id.ll_paan_shop);
+        linearLayoutPaan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), StoreListActivity.class);
-                intent.putExtra("title", "Order Grocery");
+                intent.putExtra("title", "Order Paan");
                 intent.putExtra("id", "1");
                 requireActivity().startActivity(intent);
             }
@@ -81,6 +83,14 @@ public class HomeFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), StoreListActivity.class);
                 intent.putExtra("title", "Order Food");
                 intent.putExtra("id", "2");
+                requireActivity().startActivity(intent);
+            }
+        });
+
+        linearLayoutAnyStore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AnyStoreActivity.class);
                 requireActivity().startActivity(intent);
             }
         });

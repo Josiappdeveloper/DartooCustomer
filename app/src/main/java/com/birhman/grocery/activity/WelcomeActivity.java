@@ -39,7 +39,12 @@ public class WelcomeActivity extends AppCompatActivity {
 
         localStorage = new LocalStorage(getApplicationContext());
         if (localStorage.isUserLoggedIn()) {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+          //  startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
         setContentView(R.layout.activity_welcome);
@@ -119,7 +124,9 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onLetsClicked(View view) {
-        startActivity(new Intent(getApplicationContext(), LoginRegisterActivity.class));
+        Intent intent = new Intent(WelcomeActivity.this, LoginRegisterActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
         finish();
         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
     }

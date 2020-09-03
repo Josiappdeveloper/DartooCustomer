@@ -3,7 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.CheckoutActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.CheckoutActivity"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,6 +29,8 @@
         android:orientation="vertical"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_55sdp"
+        android:layout_below="@+id/app_bar"
+        android:background="@color/white"
         android:visibility="visible">
 
         <RelativeLayout
@@ -108,14 +128,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:checked="true"
-                android:text="CARD PAYMENT" />
+                android:text="Card Payment" />
 
             <RadioButton
                 android:id="@+id/cash_on_delivery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="CAH ON DELIVERY" />
+                android:text="Cash on Delivery" />
 
         </RadioGroup>
 
@@ -461,18 +481,16 @@
 
     <LinearLayout
         android:id="@+id/pay_ll"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_42sdp"
         android:layout_gravity="center"
         android:background="@drawable/bg_pay"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_16sdp"
         android:layout_alignParentBottom="true"
         android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:padding="14dp">
-
+        android:padding="10dp">
 
         <com.birhman.grocery.customfonts.MyTextView
             android:id="@+id/total_pay"
@@ -480,16 +498,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingLeft="6dp"
-            android:paddingRight="6dp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
             android:text="CONFIRM AND PAY Rs."
             android:textColor="@color/white"
             android:textSize="@dimen/text" />
     </LinearLayout>
-
-    <!--<FrameLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>-->
 
 </RelativeLayout>

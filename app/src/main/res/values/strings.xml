@@ -62,4 +62,5 @@
     <string name="date_d">Date:</string>
     <string name="confirm">Confirm</string>
     <string name="delivered">Delivered</string>
+    <string name="title_search">Search</string>
 </resources>

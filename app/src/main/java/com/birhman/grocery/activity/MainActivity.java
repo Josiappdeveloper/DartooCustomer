@@ -140,9 +140,9 @@ public class MainActivity extends BaseActivity
                     case R.id.navigation_account:
                         viewFragment(new ProfileFragment(), FRAGMENT_OTHER);
                         return true;
-                    case R.id.navigation_more:
+                    /*case R.id.navigation_more:
                         viewFragment(new MoreFragment(), FRAGMENT_OTHER);
-                        return true;
+                        return true;*/
                 }
                 return false;
             }

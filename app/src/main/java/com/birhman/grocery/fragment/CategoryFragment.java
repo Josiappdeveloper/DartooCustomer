@@ -35,29 +35,6 @@ public class CategoryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_category, container, false);
 
-        LinearLayout linearLayoutAnyStore = view.findViewById(R.id.ll_any_store);
-        LinearLayout linearLayoutFood = view.findViewById(R.id.ll_food);
-        linearLayoutAnyStore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), StoreListActivity.class);
-                intent.putExtra("title", "Order Grocery");
-                intent.putExtra("id", "1");
-                requireActivity().startActivity(intent);
-            }
-        });
-
-        linearLayoutFood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), StoreListActivity.class);
-                intent.putExtra("title", "Order Food");
-                intent.putExtra("id", "2");
-                requireActivity().startActivity(intent);
-            }
-        });
-
-
         return view;
     }
 
@@ -66,7 +43,7 @@ public class CategoryFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Category");
+        getActivity().setTitle("Search");
     }
 
 }

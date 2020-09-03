@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -47,14 +49,19 @@ public class CartActivity extends BaseActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495E")));
-        changeActionBarTitle(getSupportActionBar());
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            toolbar.setTitleMarginStart((int) getResources().getDimension(R.dimen._15sdp));
+        }
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
-        //upArrow.setColorFilter(Color.parseColor("#FFFFFF"), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+     //   toolbar.setTitle("Confirm Order");
+        getSupportActionBar().setTitle("Confirm Order");
+        toolbar.setTitleTextColor(Color.BLACK);
 
         localStorage = new LocalStorage(getApplicationContext());
         gson = new Gson();
@@ -74,7 +81,9 @@ public class CartActivity extends BaseActivity {
         checkoutLL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), CheckoutActivity.class));
+                Intent intent = new Intent(getApplicationContext(), CheckoutActivity.class);
+                intent.putExtra("price", String.valueOf(amount));
+                startActivity(intent);
             }
         });
     }
@@ -96,20 +105,12 @@ public class CartActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.cart_delete:
-
                 AlertDialog diaBox = showDeleteDialog();
                 diaBox.show();
-
                 return true;
 
             case android.R.id.home:
-                // todo: goto back activity from here
-
-                Intent intent = new Intent(CartActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
-                finish();
+                onBackPressed();
                 return true;
 
             default:
@@ -147,30 +148,6 @@ public class CartActivity extends BaseActivity {
                 })
                 .create();
         return myQuittingDialogBox;
-    }
-
-    private void changeActionBarTitle(ActionBar actionBar) {
-        // Create a LayoutParams for TextView
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.MATCH_PARENT, // Width of TextView
-                RelativeLayout.LayoutParams.WRAP_CONTENT); // Height of TextView
-        TextView tv = new TextView(getApplicationContext());
-        // Apply the layout parameters to TextView widget
-        tv.setLayoutParams(lp);
-     //   tv.setGravity(Gravity.CENTER);
-        tv.setTypeface(null, Typeface.BOLD);
-        // Set text to display in TextView
-        tv.setText("Confirm Order"); // ActionBar title text
-        tv.setTextSize(20);
-
-        // Set the text color of TextView to red
-        // This line change the ActionBar title text color
-        tv.setTextColor(getResources().getColor(R.color.white));
-
-        // Set the ActionBar display option
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        // Finally, set the newly created TextView as ActionBar custom view
-        actionBar.setCustomView(tv);
     }
 
     private void setUpCartRecyclerview() {

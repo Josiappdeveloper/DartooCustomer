@@ -22,7 +22,9 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/searchBar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_42sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_16sdp"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="4dp"
                 app:cardUseCompatPadding="true">
@@ -37,6 +39,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Search product"
                         android:paddingStart="@dimen/_16sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:layout_centerVertical="true"
                         android:background="@drawable/category_textview_bg"/>
 
@@ -357,6 +360,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:id="@+id/ll_paan_shop"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_80sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
