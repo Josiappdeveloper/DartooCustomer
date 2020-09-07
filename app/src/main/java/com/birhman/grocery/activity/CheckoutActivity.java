@@ -38,6 +38,8 @@ public class CheckoutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
+        price = getIntent().getStringExtra("price");
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -47,10 +49,10 @@ public class CheckoutActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
-        getSupportActionBar().setTitle("Checkout");
+        getSupportActionBar().setTitle("BILL TOTAL: " + "\u20B9" + price);
         toolbar.setTitleTextColor(Color.BLACK);
 
-        price = getIntent().getStringExtra("price");
+
         TextView textView = findViewById(R.id.total_pay);
         textView.setText("Confirm and Pay " + "\u20B9" + price);
 

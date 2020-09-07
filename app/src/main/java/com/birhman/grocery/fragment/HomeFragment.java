@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -23,12 +24,16 @@ import com.birhman.grocery.R;
 import com.birhman.grocery.activity.AnyStoreActivity;
 import com.birhman.grocery.activity.MainActivity;
 import com.birhman.grocery.activity.StoreListActivity;
+import com.birhman.grocery.adapter.BannerAdapter;
 import com.birhman.grocery.adapter.CategoryAdapter;
 import com.birhman.grocery.adapter.HomeSliderAdapter;
 import com.birhman.grocery.adapter.NewProductAdapter;
 import com.birhman.grocery.adapter.PopularProductAdapter;
 import com.birhman.grocery.helper.Data;
+import com.birhman.grocery.model.BannerResponse;
 import com.birhman.grocery.model.Category;
+import com.birhman.grocery.util.LinePagerIndicatorDecoration;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +57,11 @@ public class HomeFragment extends Fragment {
     private Integer[] images = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3,
             R.drawable.slider4, R.drawable.slider5};
 
+    private List<BannerResponse> mList = new ArrayList<>();
+    private int[] moduleImages = new int[]{R.drawable.slider1, R.drawable.slider2,
+            R.drawable.slider3, R.drawable.slider4, R.drawable.slider5};
+    RecyclerView recyclerViewBanner;
+
     public HomeFragment() {}
 
     @Override
@@ -67,6 +77,23 @@ public class HomeFragment extends Fragment {
         LinearLayout linearLayoutAnyStore = view.findViewById(R.id.ll_any_store);
         LinearLayout linearLayoutFood = view.findViewById(R.id.ll_food);
         LinearLayout linearLayoutPaan = view.findViewById(R.id.ll_paan_shop);
+
+        mList = new ArrayList<>();
+        for (int i = 0; i < moduleImages.length; i++) {
+            BannerResponse homeResponse = new BannerResponse();
+            homeResponse.setResourceId(moduleImages[i]);
+            mList.add(homeResponse);
+        }
+        recyclerViewBanner = view.findViewById(R.id.rv_banner);
+        recyclerViewBanner.setLayoutManager(new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.HORIZONTAL, false));
+        BannerAdapter homeAdapter = new BannerAdapter(mList, Glide.with(getActivity().getApplicationContext()));
+        PagerSnapHelper snapHelper = new PagerSnapHelper();
+        snapHelper.attachToRecyclerView(recyclerViewBanner);
+        recyclerViewBanner.setAdapter(homeAdapter);
+
+        recyclerViewBanner.addItemDecoration(new LinePagerIndicatorDecoration());
+
         linearLayoutPaan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +140,7 @@ public class HomeFragment extends Fragment {
         pRecyclerView.setItemAnimator(new DefaultItemAnimator());
         pRecyclerView.setAdapter(pAdapter);
 
-        timer = new Timer();
+        /*timer = new Timer();
         viewPager = view.findViewById(R.id.viewPager);
         sliderDotspanel = view.findViewById(R.id.SliderDots);
         HomeSliderAdapter viewPagerAdapter = new HomeSliderAdapter(getContext(), images);
@@ -149,7 +176,7 @@ public class HomeFragment extends Fragment {
             public void onPageScrollStateChanged(int state) {
 
             }
-        });
+        });*/
     //    scheduleSlider();
 
         return view;

@@ -93,6 +93,21 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
                 context.startActivity(intent);
             }
         });
+
+        holder.title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, StoreViewActivity.class);
+                intent.putExtra("id", product.getId());
+                intent.putExtra("title", product.getTitle());
+                intent.putExtra("image", product.getImage());
+                intent.putExtra("distance", product.getDistance());
+                intent.putExtra("time", product.getTimes());
+                intent.putExtra("storeType", id);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
